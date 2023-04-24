@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Star Rating Form | CodingNepal</title>
+    <link rel="stylesheet" href="Customerreview.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="post" style="background-color: none;">
+        <div class="text">Thanks for rating us!</div>
+        <div class="edit">
+          <a href="/mypage2">RETURN HOME</a></div>
+      </div>
+      <div class="head"> 
+        <h2 style="color: rgb(247, 178, 52);">please provide your valuable feedback!</h2>
+      </div>
+      <div>
+      <form class="star-widget">
+        <div>
+        <input type="radio" name="rate" id="rate-5" >
+        <label for="rate-5" class="fas fa-star" id="rate5" ></label>
+        <input type="radio" name="rate" id="rate-4">
+        <label for="rate-4" class="fas fa-star" id="rate4" ></label>
+        <input type="radio" name="rate" id="rate-3">
+        <label for="rate-3" class="fas fa-star" id="rate3" ></label>
+        <input type="radio" name="rate" id="rate-2">
+        <label for="rate-2" class="fas fa-star" id="rate2" ></label>
+        <input type="radio" name="rate" id="rate-1">
+        <label for="rate-1" class="fas fa-star" id="rate1" ></label>
+        <header></header>
+    </div>
+          <div id="form-data">
+          <div class="textarea">
+            <textarea cols="30" placeholder="Describe your experience.."></textarea>
+          </div>
+          <div>
+            <input type="file" id="files" accept="image/*" multiple="multiple">
+            <label for="files" id="images"><i class="fa-solid fa-image"></i> Upload Photos</label>
+            <output id="result">
+          </div>
+          <div class="btn">
+            <button type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+    </div>
+    <script src="Customerreview.js"></script>
+
+  </body>
+</html>

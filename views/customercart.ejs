@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            margin: 5px 0;
+            padding: 8px;
+            box-sizing: border-box;
+            border: 1px solid rebeccapurple;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <% if(products.length>0){ %>
+
+        <% products.forEach(product=>{ %>
+            <div class="container">
+                <p> <%=product.pname  %></p>
+            <p><%=product.catagory  %></p>
+            <p> <%=product.subcatagory  %></p>
+            <p></span> 
+                <% if(product.pavailability==1){ %>
+                    Available
+                <% }else{ %>
+                    Not Available
+                <% } %>
+            </p>
+            <p><%=product.pbudget  %></p>
+            <p><%=product.pdiscount  %> % Discount</p>
+            <p><%=product.pdescription  %></p>
+            </div>
+            <a href="/Final-payment1"><button>Final Payment</button></a>
+        <% }) %>
+
+    <% }else{ %>
+        <p style="text-align: center;"> No Orders Yet</p>
+    <% } %>
+</body>
+</html>

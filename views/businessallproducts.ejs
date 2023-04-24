@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All My Collections</title>
+    <link rel="stylesheet" href="businessallproducts.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="maincontainer">
+        
+        <% if(products.length>0){ %>
+            <div class="back" title="return"><a href="/businessinterface1"><i class="fa-solid fa-arrow-left"></i></a></i></div>
+            <div class="mainhead" style="text-align: center;"><h2>Your Products</h2></div>
+            <% for(let i of products){ %>
+                <div class="encapsulated" style="margin-top: 50px;">
+                    <a href="/businessallproducts/<%=String(i._id) %>">
+                        <div class="container" style="border-top-right-radius: 10px;border-top-left-radius: 10px;">
+                            <img src="./images/cardphoto4.jpg" alt="Avatar" class="image">
+                            <div class="overlay">
+                            <div class="text"><%=i.pname  %></div>
+                            </div>
+                        </div>
+                    </a>
+                    <div class="editdelete">
+                        <a href="/businessproductupdate/<%=String(i._id) %>" style="border-bottom-left-radius: 10px;"><i class="fa fa-edit" style="font-size:25px"></i></a>
+                        <a href="/businessproductdelete/<%=String(i._id) %>" style="border-bottom-right-radius: 10px;"><i class="fa fa-trash-o" style="font-size:25px"></i></a>
+                    </div>
+                </div>
+            <% } %>
+        <% }else{ %>
+            <div class="noprod">
+                <div class="back"  title="return"><a href="/businessinterface1"><i id="back1" class="fa-solid fa-arrow-left"></i></a></i></div>
+                <h2>Feels So Light !</h2>
+                <h2>Time To Start Your Journey By Adding Products...</h2>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

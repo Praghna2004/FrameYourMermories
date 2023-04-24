@@ -1,0 +1,207 @@
+body {
+    font-family: "Lato", sans-serif;
+    background: white;
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .sidenav {
+    height: 96vh;
+    width: 18%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 20px;
+    text-align:left;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+  
+  .sidenav button{
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    background-color: #111;
+    border: none;
+    width: 100%;
+    text-align: left;
+    margin: 17px 0;
+    margin-left: 20px;
+    transition: 0.2s all;
+  }
+  
+  .sidenav button:hover {
+    color:palevioletred;
+    background: white;
+    border-top-left-radius:15px ;
+    border-bottom-left-radius: 15px;
+    left: 30px;
+  }
+  
+  .main {
+    margin-left: 18%; 
+    font-size: 28px;
+    padding: 0px 10px;
+    width: 78vw;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+  h3{
+    color: white;
+    text-align: center;
+  }
+
+ .percentages{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+ }
+
+ .partners,.prod,.sales{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100px;
+    width: 120px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+ }
+
+ .pmainheader{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  text-align: center;
+  border-top: 1px solid green;
+  border-bottom: 1px solid green;
+  height: fit-content;
+  padding: 5px;
+ }
+
+ .partdetails{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  text-align: center;
+  /* font-variant: small-caps; */
+  margin-top: 8px;
+  background-color: rgb(251, 253, 113);
+ }
+
+ /* .partdetails {
+  background-color: rgb(251, 253, 113);
+ } */
+ .partdetails:hover{
+  background-color: grey;
+ }
+
+ .partner1{
+  position: absolute;
+  background: white;
+
+ }
+
+ .clients1{
+  position: absolute;
+  display: none;
+  color: black;
+  margin-left: 18%;
+  background: white;
+
+ }
+
+ .clientdetails{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  text-align: center;
+  font-variant: small-caps;
+  margin-top: 8px;
+  background-color: rgb(250, 178, 202);
+ }
+
+ .clientdetails:hover{
+  background-color: grey;
+ }
+
+ .cemail{
+  font-variant: none;
+ }
+
+ .Breg1{
+  position: absolute;
+  display: none;
+  color: black;
+  background: white;
+  /* height: max-content; */
+ }
+
+ 
+ .finance1{
+   position: absolute;
+   display: none;
+   color: black;
+   
+  }
+
+button{
+  background: none;
+  border: none;
+}
+
+/* complaits  */
+
+.complaints1{
+ position: absolute;
+ display: none;
+ 
+}
+
+.complaints{
+  overflow-x: none;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 10px;
+  height: 96vh;
+}
+.complaints .complain{
+  
+  /* width: 200px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* text-align: center; */
+  align-items: center;
+  margin: 8px 0;
+  padding: 5px;
+  /* width: 100%; */
+  border-top-left-radius: 10px;
+  border-bottom-left-radius:10px ;
+  margin-left: 10%;
+  font-size: 1.2rem;
+  background-color: rgba(0,50,50,0.9);
+  color: beige;
+}
+.complaints .complain>*{
+  width: 100%;
+  margin: 5px;
+  
+}
+
+button > a{
+  color: grey;
+  text-decoration: none;
+}
+
+button > a:hover{
+  color: palevioletred;
+}

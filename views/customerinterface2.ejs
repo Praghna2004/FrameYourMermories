@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Interface</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="customerinterface2_1.css"> -->
+    <link rel="stylesheet" href="customerinterface2_2.css">
+</head>
+<body>
+
+<div class="mainheader">
+
+</div>
+
+  <% if(sucess) {%>
+    <div style="font-size: 1.1rem;text-align: center;color: lightgreen;" class="sucess"><%=sucess %></div>
+  <% } %>
+
+
+<div class="allcatagory">
+  <ul>
+    <li><a href="#events">EVENTS</a></li>
+    <li><a href="#photography">PHOTO</a></li>
+    <li><a href="#food">FOOD</a></li>
+    <li><a href="#gifts">GIFT</a> </li>
+  </ul>
+</div>
+<div class="mainbox">
+  <div class="mainbox1">
+    <div id="myname1" class="catagoryname">
+      EVENTS
+    </div>
+    <div class="events maincontainer" id="events">
+      <% if(products.length>0){ %>
+        <% for(let i of products){ %>
+            
+          <% if(i.catagory==='eve'){ %>
+            <div class="encapsulated">
+              <a href="/customerproductdescription/<%=String(i._id) %>">
+                  <div class="container">
+                    <% if(i.image1){ %>
+                      <img src="<%=i.image1%>" alt="Not Found" class="image">
+                    <% }else{ %>
+                      
+                      <img src="images/defaultproductimage.jpg" alt="Not Found" class="image">
+                    <% } %>
+                      
+                      <div class="overlay">
+                      <div class="text"><%=i.pname  %></div>
+                      </div>
+                  </div>
+              </a>
+              <div class="editdelete">
+                  <a href="/customerproductaddtocart/<%=String(i._id)%>"><i class="fa fa-shopping-cart" style="font-size:25px"></i></a>
+                  <a href="/customerproductaddtowishlist/<%=String(i._id) %>"><i class="fa fa-heart-o" style="font-size:25px;"></i></a>
+              </div>
+          </div>
+          <% } %>
+            
+        <% } %>
+    <% }else{ %>
+        <p>Time To Start Your Journey By Adding Products</p>
+    <% } %>
+    </div>
+  </div>
+  
+
+
+  <div class="mainbox2">
+    <div id="myname2" class="catagoryname">
+      PHOTOGRAPHY
+    </div>
+    <div class="photography maincontainer" id="photography">
+      <% if(products.length>0){ %>
+        <% for(let i of products){ %>
+            
+          <% if(i.catagory==='photo'){ %>
+            <div class="encapsulated">
+              <a href="/customerproductdescription/<%=String(i._id) %>">
+                  <div class="container">
+                    <% if(i.image1){ %>
+                      <img src="<%=i.image1%>" alt="Not Found" class="image">
+                    <% }else{ %>
+                      
+                      <img src="images/defaultproductimage.jpg" alt="Not Found" class="image">
+                    <% } %>
+                      <div class="overlay">
+                      <div class="text"><%=i.pname  %></div>
+                      </div>
+                  </div>
+              </a>
+              <div class="editdelete">
+                <a href="/customerproductaddtocart/<%=String(i._id) %>"><i class="fa fa-shopping-cart" style="font-size:25px"></i></a>
+                <a href="/customerproductaddtowishlist/<%=String(i._id) %>"><i class="fa fa-heart-o" style="font-size:25px;"></i></a>
+            </div>
+          </div>
+          <% } %>
+            
+        <% } %>
+    <% }else{ %>
+        <p>Time To Start Your Journey By Adding Products</p>
+    <% } %>
+    </div>
+  </div>
+
+  <div class="mainbox3">
+    <div id="myname3" class="catagoryname">
+      FOOD ITEMS
+    </div>
+    <div class="food maincontainer" id="food">
+      <% if(products.length>0){ %>
+        <% for(let i of products){ %>
+            
+          <% if(i.catagory==='food'){ %>
+            <div class="encapsulated">
+              <a href="/customerproductdescription/<%=String(i._id) %>">
+                  <div class="container">
+                    <% if(i.image1){ %>
+                      <img src="<%=i.image1%>" alt="Not Found" class="image">
+                    <% }else{ %>
+                      
+                      <img src="/images/defaultproductimage.jpg" alt="Not Found" class="image">
+                    <% } %>
+                      <div class="overlay">
+                      <div class="text"><%=i.pname  %></div>
+                      </div>
+                  </div>
+              </a>
+              <div class="editdelete">
+                <a href="/customerproductaddtocart/<%=String(i._id) %>"><i class="fa fa-shopping-cart" style="font-size:25px"></i></a>
+                <a href="/customerproductaddtowishlist/<%=String(i._id) %>"><i class="fa fa-heart-o" style="font-size:25px;"></i></a>
+            </div>
+          </div>
+          <% } %>
+            
+        <% } %>
+    <% }else{ %>
+        <p>Time To Start Your Journey By Adding Products</p>
+    <% } %>
+    </div>
+  </div>
+
+
+  <div class="mainbox4">
+    <div id="myname4" class="catagoryname">
+      GIFTS
+    </div>
+    <div class="gifts maincontainer" id="gifts">
+      <% if(products.length>0){ %>
+        <% for(let i of products){ %>
+            
+          <% if(i.catagory==='gift'){ %>
+            <div class="encapsulated">
+              <a href="/customerproductdescription/<%=String(i._id) %>">
+                  <div class="container">
+                    <% if(i.image1){ %>
+                      <img src="<%=i.image1%>" alt="Not Found" class="image">
+                    <% }else{ %>
+                      
+                      <img src="images/defaultproductimage.jpg" alt="Not Found" class="image">
+                    <% } %>
+                      <div class="overlay">
+                      <div class="text"><%=i.pname  %></div>
+                      </div>
+                  </div>
+              </a>
+              <div class="editdelete">
+                <a href="/customerproductaddtocart/<%=String(i._id) %>"><i class="fa fa-shopping-cart" style="font-size:25px"></i></a>
+                <a href="/customerproductaddtowishlist/<%=String(i._id) %>"><i class="fa fa-heart-o" style="font-size:25px;"></i></a>
+            </div>
+          </div>
+          <% } %>
+            
+        <% } %>
+    <% }else{ %>
+        <p>Time To Start Your Journey By Adding Products</p>
+    <% } %>
+    </div>
+  </div>
+</div>
+<script src="/public/customerinterface2.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Interface 2</title>
+    <link rel="stylesheet" href="businessinterface2.css">
+
+</head>
+<body>
+    <div class="maincon">
+        <header>
+            <div class="mainheader">
+                <div style="font-size: 1.5rem;" class="box1">
+                    <a style="text-decoration: none;color: white;" href="/frameyourmemories">FRAME YOUR MEMORIES</a>
+                </div>
+                <div class="box2">
+                    <ul>
+                        <li><a href="/businessinterface1" style="text-transform: uppercase;"><% if(user){ %>
+                            Wecolme <%=user %> 
+                        <% } %>
+                        <li><a href="/businessinterface2">CATEGORY</a></li>
+                        <!-- <li><a href="">SERVICES</a></li> -->
+                        <li><a href="/businessallproducts">PRODUCTS</a></li>
+                        <li><a href="/businesslocation">LOCATIONS</a></li>
+                        
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <div style="text-align: center;color: darkolivegreen;"><h3>Start Your Journey...</h3></div>
+        <form action="/businessinterface3" method="post" id="myform">
+            <div class="maincontainer">
+                <div class="catagories">
+                    <div class="catagory" data-id
+                    ="0">Events</div>
+                    <div class="catagory" data-id
+                    ="1">Photography</div>
+                    <div class="catagory" data-id
+                    ="2">Food</div>
+                    <div class="catagory" data-id
+                    ="3">Gifts</div>
+                </div>
+                <div class="subcatagories">
+                    <div class="eventsubcatagories" data-id="0">
+                        
+                            <% for( let i=0;i<20;i++){ %>
+                                <span><input value="eve e<%=i  %>" type="checkbox" name="eve e<%=i  %>" id="eve<%=i  %>" class="span">
+                                    <label for="eve<%=i  %>" >eve<%=i  %></label></span>
+                            <% } %>
+                        
+                        
+                    </div>
+                    <div style="display: none;" class="photographysubcatagories" data-id="1">
+                        <% for( let i=0;i<24;i++){ %>
+                            <span><input name="photo p<%=i  %>" type="checkbox" name="photo p<%=i  %>" id="photo<%=i  %>"> <label for="photo<%=i  %>">photo<%=i  %></label></span>
+                        <% } %>
+                    </div>
+                    <div style="display: none;" class="foodsubcatagories" data-id="2">
+                        <% for( let i=0;i<25;i++){ %>
+                            <span><input value="food f<%=i  %>" type="checkbox" name="food f<%=i  %>" id="food<%=i  %>"> <label for="food<%=i  %>">food<%=i  %></label></span>
+                        <% } %>
+                    </div>
+                    <div style="display: none;" class="giftsubcatagories" data-id="3">
+                        <% for( let i=0;i<26;i++){ %>
+                            <span><input value="gift g<%=i  %>" type="checkbox" name="gift g<%=i  %>" id="gift<%=i  %>"> <label for="gift<%=i  %>">gift<%=i  %></label></span>
+                        <% } %>
+                    </div>
+                </div>
+                <button style="margin: 10px;padding:5px 8px;width: 80px;" disabled>submit</button>
+            </div>
+        </form>
+        
+    </div>
+    <script src="businessinterface2.js"></script>
+</body>
+</html>
